@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    /* background-image: linear-gradient(rgb(151, 1, 1), purple); */
+    background-color: #333;
+
+    background-position: top;
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+.header {
+
+}
+
+.header__title {
+    color: white;
+    padding: 2rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.header__inputs {
+    /* padding: .5rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+
+.inputs {
+    padding: .9rem;
+    margin-right: 1rem;
+    border: gold solid .5px;
+    background-color: black;
+    color: white;
+    font-size: 1.7rem;
+}
+
+.movies {
+   
+}
+
+.movies__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+   margin: 0 auto;
+}
+
+/* generat in functions.js */
+
+.movies__container_block {
+    margin: 2rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    border: black outset 5px;
+    position: relative;
+
+}
+
+.movies__container_block::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(61, 57, 57);
+    opacity: .6;
+    transition: all .5s;
+    z-index: 1;
+}
+
+/* .movies__container_block:hover */
+
+.movies__container_block:hover::after {
+    opacity: 0;
+    /* height: 0%; */
+    width: 0%;
+}
+
+
+.movies__container_block::after:hover {
+}
+
+.movies__container_block_text {
+    background-color: black;
+    border: black solid 2px;
+    /* width: 30rem; */
+    height: 11rem;
+    color: white;
+    margin-bottom: .4rem;
+    padding: 1.5rem;
+}
+
+.movies__container_block_text p {
+    margin-bottom: 1rem;
+}
+
+.container__block_title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container__block_year {
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-align: center;
+    color: silver;
+    /* text-decoration: underline; */
+
+}
+
+.container__block_type {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    color: sivler;
+}
+
+.container__block_image {
+    width: 300px;
+    height: 350px;
+}
+
+.container__block_button{
+    font-size: 1.7rem;
+    font-weight: 100;
+    letter-spacing: .3rem;
+    color: white;
+    background-color: black;
+    padding: 2rem;
+    border: black solid 2px;
+    margin-top: .4rem;
+    transition: all .3s;
+
+}
+
+.container__block_button:hover {
+    color: gold;
+    /* z-index: 2; */
+}
+
+/* generat in functions.js */
