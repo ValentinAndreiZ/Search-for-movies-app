@@ -11,7 +11,7 @@ var detailsContainer = document.getElementById('detailsContainer')
 
 
 
-fetch(`http://www.omdbapi.com/?apikey=fe7364b5&r=json&plot=full&i=${storedId}`).then(result => {
+fetch(`https://www.omdbapi.com/?apikey=fe7364b5&r=json&plot=full&i=${storedId}`).then(result => {
     return result.json()
 }).then(details => {
     console.log(details)
