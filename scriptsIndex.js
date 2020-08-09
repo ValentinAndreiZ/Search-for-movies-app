@@ -9,7 +9,7 @@ var moviesContainer = document.getElementById('moviesContainer');
 getMovieButton.addEventListener('click', () => {
     var lettersWrote = writeMovie.value;
 
-    fetch(`http://www.omdbapi.com/?apikey=fe7364b5&r=json&plot=full&s=${lettersWrote}`).then(Response => {
+    fetch(`https://www.omdbapi.com/?apikey=fe7364b5&r=json&plot=full&s=${lettersWrote}`).then(Response => {
         return Response.json()
     }).then(data => {
         var arrayOfMovieInfo = extractMoviesInfo(data)
