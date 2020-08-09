@@ -6,8 +6,7 @@ var getMovieButton = document.getElementById('getMovieButton');
 
 var moviesContainer = document.getElementById('moviesContainer');
 
-function renderAll() {
-
+getMovieButton.addEventListener('click', () => {
     var lettersWrote = writeMovie.value;
 
     fetch(`http://www.omdbapi.com/?apikey=fe7364b5&r=json&plot=full&s=${lettersWrote}`).then(Response => {
@@ -19,17 +18,13 @@ function renderAll() {
     }).catch((error) => {
         console.error('Error:', error);
     });
-
-}
-
-
-getMovieButton.addEventListener('click', renderAll)
+})
 
 var input = document.getElementById("myInput");
 
 writeMovie.addEventListener("keyup", (e) => {
     if (e.keyCode === 13) {
-        renderAll()
+        getMovieButton.click()
     }
 })
 
